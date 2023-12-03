@@ -30,7 +30,7 @@ public class DNViewModel: ObservableObject {
         }
     }
     
-    public init(root: DNDefination = DNDefination(width: 130, height: 38)) {
+    public init(root: DNDefination) {
         self.stack = [DNDefination]()
         self.current = root
         stack.append(root)
@@ -72,7 +72,7 @@ public struct DNNavigationView: View {
             
             // Main Content
             ZStack {
-                Color.black
+                Rectangle()
                 HStack(alignment: .center) {
                     if let main = vm.current.mainAccessory {
                         main
